@@ -11,7 +11,13 @@ app.set('view engine','handlebars');
 
 app.get('/', (req,res) => {
     //res.send("Testing");
-    res.render('index');
+    //res.render('index');
+    res.render('index', 
+    { 
+        title: 'Home',
+        companyName: 'Business Ltd'
+    }
+    );
 });
 
 app.get('/contact', (req,res) => {
